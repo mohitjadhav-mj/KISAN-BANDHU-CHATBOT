@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kisan Bandhu Chatbot</title>
+  <link rel="icon" href="C:\Users\hp\Desktop\chatbot.png">
+  <style>
+/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #333; /* Text color */
+  background-color: #f9f9f9; /* Light background color */
+}
+
+/* Header styles */
+header {
+  background-color: #4CAF50; /* Header background color */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   animation: slideIn 2s ease-in-out forwards;
+}
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+.header-container {
+  display: flex; /* Allow image and title to display inline */
+  align-items: center; /* Vertically align image and title */
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  text-transform: uppercase; /* Uppercase title */
+  letter-spacing: 2px; /* Letter spacing for title */
+  color: #fff; /* Title color */
+  animation: animate-text 3s ease-in-out infinite alternate;
+}
+
+@keyframes animate-text {
+  from {
+    color: #fff; /* Text color from */
+  }
+  to {
+    color: #333; /* Text color to */
+  }
+}
+
+nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: #fff; /* Nav link color */
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+nav a:hover {
+  background-color: #388e3c; /* Nav link hover background color */
+}
+
+/* Main content styles */
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+  background-color: #fff; /* Section background color */
+  padding: 2rem;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333; /* Heading color */
+}
+
+p {
+  color: #555; /* Paragraph text color */
+}
+
+ol {
+  list-style-type: none;
+  counter-reset: my-awesome-counter;
+}
+
+ol li {
+  position: relative;
+  counter-increment: my-awesome-counter;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  color: #333; /* List item text color */
+}
+
+ol li::before {
+  content: counter(my-awesome-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  color: #4CAF50; /* List item number color */
+}
+
+img {
+  width: 150px; /* Default image width */
+  border-radius: 100%;
+}
+
+/* Responsive styles for mobile view */
+@media (max-width: 768px) {
+  /* Stack header elements vertically on mobile */
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Adjust font size for mobile */
+  }
+
+  nav {
+    margin-top: 1rem; /* Add space between header and navigation on mobile */
+  }
+
+  /* Adjust image size for mobile view */
+  img {
+    width: 75px; /* Smaller image width for mobile */
+  }
+}
+
+/* Footer styles */
+footer {
+  background-color: #4CAF50; /* Footer background color */
+  padding: 1rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  color: #fff;
+}
+/* Footer styles */
+footer {
+  background-color: #4CAF50; /* Footer background color */
+  padding: 1rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  color: #fff; /* Footer text color */
+}
+
+
+  </style>
+
+	<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "8e6b08be-6a2e-4a1f-9e4e-17550daac0db", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "64a6b525-3d97-4912-b528-d666fef4a345", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="chatbot.png" alt="Kisan Bandhu Chatbot">
+      <h1 class="animated-text">Kisan Bandhu Chatbot</h1>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="https://bit.ly/mohit-portfolio">Developer</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h2>Welcome!</h2>
+      <p>This is the home page of a chatbot. Here's a quick guide on how to use our helpful chatbot to get information about crops and farming practices:</p>
+      <h3>Steps of Using chatbot:</h3>
+      <ol>
+    <li><b>The Chatbot is on the bottom Right Corner of the web page.</b></li>
+        <li><b>Start a Conversation:</b> Simply say "Hi" or "Hello" to initiate a chat with the chatbot.</li>
+        <li><b>Ask Your Question:</b> Once the chat starts, ask your question clearly. For example, "Give me information about crop diseases".</li>
+        <li><b>Get Answers and Information:</b> The chatbot will respond to your question and provide relevant information.</li>
+        <li><b>End the Conversation:</b> When you're finished, you can say "Thank You" or simply close the chat window.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Mohit Jadhav</p>
+  </footer>
+</body>
+</html>
